@@ -263,7 +263,7 @@ def scanBlocks(chain):
             'from': wallet_address,
             'nonce': w3_dst.eth.get_transaction_count(wallet_address),
             'gas': 200000,
-            'gasPrice': w3.to_wei('50', 'gwei')
+            'gasPrice': w3_dst.to_wei('50', 'gwei')
         })
 
         signed_txn = w3_dst.eth.account.sign_transaction(transaction, private_key=private_key)
